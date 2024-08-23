@@ -1,0 +1,25 @@
+.bank-name a {
+    visibility: hidden;
+}.bank-name:hover a {
+    visibility: visible;
+}.account-number a {
+    visibility: hidden;
+}.account-number:hover a {
+    visibility: visible;
+}.swift-code a {
+    visibility: hidden;
+}.swift-code:hover a {
+    visibility: visible;
+}.bank-address a {
+    visibility: hidden;
+}.bank-address:hover a {
+    visibility: visible;
+}.bank-city a {
+    visibility: hidden;
+}.bank-city:hover a {
+    visibility: visible;
+}.bank-country a {
+    visibility: hidden;
+}.bank-country:hover a {
+    visibility: visible;
+}

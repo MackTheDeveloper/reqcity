@@ -1,0 +1,56 @@
+@media (max-width: 1199px){
+	.content-404 h1{
+		font-size: 140px;
+		line-height: 175px
+	}
+	.content-404 h2{
+		font-size: 35px;
+    	line-height: 40px;
+	}
+	.content-404 p{
+		font-size: 23px;
+	    margin-bottom: 60px;
+	}
+	.go-to-home-btn{
+		font-size: 23px;
+	}
+}
+
+@media (max-width: 991px){
+	.page-404{
+		height: 100vh;
+		background: #11B0B7;
+		text-align: center;
+	}
+}
+
+@media (max-width: 575px){
+	.top-logo img {
+	    height: 55px;
+	}
+	.content-404{
+		height: calc(100% - 87px);
+	}
+	.content-404 h1{
+		font-size: 100px;
+		line-height: 150px
+	}
+	.content-404 h2{
+		font-size: 30px;
+    	line-height: 35px;
+	}
+	.content-404 p{
+		font-size: 20px;
+		line-height: 26px;
+	    margin-bottom: 50px;
+	}
+	.go-to-home-btn{
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 359px){
+	.content-404 h2{
+		font-size: 26px
+	}
+}

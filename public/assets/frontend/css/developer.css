@@ -1,0 +1,181 @@
+.open-icon-select {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+}
+
+.section_templates {
+  padding-top: 35px;
+  position: relative;
+}
+
+.section_templates .close-section {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: block;
+  height: 24px;
+  width: 24px;
+  opacity: .7;
+}
+
+#charCount {
+  display: inline;
+}
+
+.prevent-selection {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.status_dropdown .dropdown-item[data-class=drafted] .status-round {
+  background: #637381;
+}
+
+.status_dropdown[data-color=drafted] .dropdown-toggle::before {
+  background: #637381;
+}
+
+.joblist-loadmore {
+  margin-top: 20px;
+}
+
+/* #modalContentAddRecruiterCandidate span {
+  display: block;
+  margin-bottom: 16px;
+} */
+
+#modalContentAddRecruiterCandidate .modal-footer .fill-btn {
+  width: auto !important;
+}
+
+.rac-error, .div-error {
+  padding: 10px 24px;
+  text-align: center;
+}
+
+
+.number-groups {
+  position: relative;
+}
+
+.cc-picker-code-filter, .cc-picker-code-list {
+  width: 100% !important;
+}
+
+.cc-picker-code-list {
+  top: 104px;
+}
+
+.group-margin .mt-24 {
+  margin-top: 24px !important;
+}
+
+.group-margin .boxlayout-infoitem>span {
+  color: #212b36 !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  margin-bottom: 8px !important;
+  line-height: 16px !important;
+}
+
+.div-table-wrapper .div-column .tag-box .diversity {
+  margin-bottom: 5px;
+  border: 1px solid #4C65FF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #F6F7FF;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  color: #4C65FF;
+  padding: 3px 8px;
+  margin-left: 10px;
+}
+
+.div-table-wrapper .div-column .tag-box {
+  display: flex;
+  -moz-display: flex;
+  -webkit-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  flex-wrap: wrap;
+}
+
+.company-signup-3 .compnay-signup-pricing .copnay-pricing-flex .pricing-chos-left .pricing-choose-panels .pricing-chos-panel .pricing-main-pills .pricing-nav-item .pricing-nav-link{
+  background-color: #fff;
+}
+
+.ui-datepicker .ui-datepicker-prev{
+  left: 2px !important;
+}
+.ui-datepicker .ui-datepicker-next{
+  right: 2px !important;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+.submittal-candidate-form .close-section-wrapper:first-child{
+padding-top: 0px !important;
+}
+
+.filter-section-wrapper.active{
+  overflow: visible;
+}
+.filter-data-wrapper .input-groups{
+  margin-bottom: 24px;
+}
+
+.profiles-pages .left-sides-bar ul li .addr-mgmt-link:hover::before {
+  background: url(../img/address-management-2.svg);
+}
+
+.profiles-pages .left-sides-bar ul li .addr-mgmt-link::before {
+  background: url(../img/address-management-1.svg);
+}
+
+.profiles-pages .left-sides-bar ul li.active .addr-mgmt-link::before {
+  background: url(../img/address-management-2.svg);
+}
+
+.terms-condition ul {
+  list-style: disc !important;
+  padding: revert !important;
+  margin-bottom: 10px;
+}
+.terms-condition span {
+  margin-bottom: 0 !important;
+}
+
+.description-popup .modal-dialog{
+  max-width: 80% !important;
+}
+/* .description-popup .modal-footer button:not(:last-child){
+  margin-right: 10px;
+} */
+
+@media (min-width: 992px) {
+  .mobile-search-bar{
+    display: none;
+  }
+}
+
+#searchFront{
+  margin-bottom: 0px;
+}

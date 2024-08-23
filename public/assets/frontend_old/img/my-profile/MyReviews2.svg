@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>My Reviews 2</title>
+    <g id="Void" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="My-Profile">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <polygon id="Star" stroke="#212B36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="12 16 7.29771798 18.472136 8.19577393 13.236068 4.39154787 9.52786405 9.64885899 8.76393202 12 4 14.351141 8.76393202 19.6084521 9.52786405 15.8042261 13.236068 16.702282 18.472136"></polygon>
+        </g>
+    </g>
+</svg>

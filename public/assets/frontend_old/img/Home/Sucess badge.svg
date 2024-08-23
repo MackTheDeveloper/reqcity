@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Sucess badge</title>
+    <g id="Void" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3.-Homepage" transform="translate(-260.000000, -448.000000)">
+            <g id="Professional-&amp;-company" transform="translate(71.000000, 374.000000)">
+                <g id="1" transform="translate(0.000000, 58.000000)">
+                    <g id="Group" transform="translate(64.000000, 12.000000)">
+                        <g id="Sucess-badge" transform="translate(125.000000, 4.000000)">
+                            <polygon id="Star" fill="#3EB557" points="8 14 5.92944764 15.7274066 5 13.1961524 2.34314575 13.6568542 2.80384758 11 0.27259339 10.0705524 2 8 0.27259339 5.92944764 2.80384758 5 2.34314575 2.34314575 5 2.80384758 5.92944764 0.27259339 8 2 10.0705524 0.27259339 11 2.80384758 13.6568542 2.34314575 13.1961524 5 15.7274066 5.92944764 14 8 15.7274066 10.0705524 13.1961524 11 13.6568542 13.6568542 11 13.1961524 10.0705524 15.7274066"></polygon>
+                            <g id="check" transform="translate(4.000000, 4.000000)">
+                                <rect id="Rectangle" fill="#D8D8D8" opacity="0" x="0" y="0" width="8" height="8"></rect>
+                                <polyline id="Path" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" points="6 2.66666667 3.25 5.33333333 2 4.12121212"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
