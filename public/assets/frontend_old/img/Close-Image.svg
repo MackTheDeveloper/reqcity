@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Close Image</title>
+    <g id="Web-Layouts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5.2-Add-Review-" transform="translate(-131.000000, -1436.000000)">
+            <g id="Reviews-&amp;-Ratings" transform="translate(71.000000, 1166.000000)">
+                <g id="Add-Reviews" transform="translate(0.000000, 128.000000)">
+                    <g id="Attach-Image" transform="translate(0.000000, 138.000000)">
+                        <g id="Close-Image" transform="translate(60.000000, 4.000000)">
+                            <circle id="Oval" fill="#FFFFFF" cx="8" cy="8" r="8"></circle>
+                            <g id="close" transform="translate(2.000000, 2.000000)">
+                                <rect id="Rectangle" fill="#D8D8D8" opacity="0" x="0" y="0" width="12" height="12"></rect>
+                                <line x1="9" y1="3" x2="3" y2="9" id="Path" stroke="#0E0001" stroke-linecap="round" stroke-linejoin="round"></line>
+                                <line x1="3" y1="3" x2="9" y2="9" id="Path" stroke="#0E0001" stroke-linecap="round" stroke-linejoin="round"></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

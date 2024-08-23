@@ -1,0 +1,1453 @@
+/* Media Queries are Here */
+@media (max-width: 1199px) {
+    .active-jobnumeric .job-table .last-data {
+        margin-top: 13px;
+        width: 100%;
+    }
+
+    .active-jobnumeric .job-table .last-data .job-table-data {
+        width: 16.666%;
+    }
+    .active-jobnumeric .job-table .last-data {
+        margin-top: 13px;
+        width: 100%;
+    }
+
+    .user-management-page .user-permission-section .user-permisions-detailed .userpermision-item span {
+        margin-bottom: 12px;
+        display: block;
+    }
+}
+@media (max-width: 991px) {
+    .ac-payment-page .payment-tab-desktop {
+        display: none;
+    }
+    .ac-payment-page .payment-tab-mobile .payment-tabed-item .payment-tabed-in {
+        padding-top: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 11px;
+    }
+
+    .user-management-tabs .div-table-wrapper .div-row:first-child {
+        display: none;
+    }
+    .user-management-tabs .div-table-wrapper .div-column:nth-child(1) {
+        margin-bottom: 12px;
+    }
+    .questionnarire-management-page .div-table-wrapper .div-column:nth-child(1) {
+        margin-bottom: 12px;
+    }
+    .user-management-tabs .div-table-wrapper .div-column {
+        margin-bottom: 4px;
+    }
+    .user-management-tabs .div-table-wrapper .div-column .action-block {
+        display: none;
+    }
+    .questionnarire-management-page .div-table-wrapper .div-column .action-block {
+        display: none;
+    }
+    /* .user-management-tabs .div-table-wrapper .div-table,
+    .div-table-wrapper .div-row,
+    .div-table-wrapper .div-column {
+        display: block;
+    } */
+    /* .questionnarire-management-page .div-table-wrapper .div-table,
+    .div-table-wrapper .div-row,
+    .div-table-wrapper .div-column {
+        display: block;
+    } */
+    .user-management-tabs ul {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .user-management-tabs .div-table-wrapper .div-row {
+        padding: 17px 16px;
+        position: relative;
+    }
+    .questionnarire-management-page .div-table-wrapper .div-row {
+        padding: 17px 16px;
+        position: relative;
+    }
+    .user-management-tabs .div-table-wrapper .div-column {
+        padding: 0 !important;
+    }
+    .questionnarire-management-page .div-table-wrapper .div-column {
+        padding: 0 !important;
+    }
+
+    .user-management-tabs .div-column .name,
+    .user-management-tabs .div-column .email {
+        margin-bottom: 12px;
+    }
+    .questionnarire-management-page .div-column .name,
+    .questionnarire-management-page .div-column .email {
+        margin-bottom: 12px;
+    }
+    .user-management-tabs .div-column .number {
+        margin-bottom: 4px;
+    }
+
+    .user-management-tabs .div-column .city {
+        margin-bottom: 4px;
+        color: #637381;
+    }
+    .user-management-tabs .div-column .country {
+        margin-bottom: 12px;
+        color: #637381;
+    }
+    .user-management-tabs .div-table-wrapper .div-column .pdf-link {
+        height: 40px;
+        width: 40px;
+    }
+    .user-management-tabs .mobile-action {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+    .questionnarire-management-page .mobile-action {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+    .questionnarire-management-page .mobile-action .c-dropdown .dropdown-menu {
+        min-width: 150px;
+    }
+    .user-management-tabs .mobile-action .c-dropdown .dropdown-menu {
+        min-width: 150px;
+    }
+    .user-management-page
+        .user-permission-section
+        .user-permisions-detailed
+        .userpermision-item
+        .user-permision-switches {
+        flex-direction: column;
+    }
+    .user-management-page .user-permission-section .user-permisions-detailed .userpermision-item span {
+        margin-bottom: 12px;
+        display: block;
+    }
+    .questionnarire-management-page .accounts-boxlayouts .ac-boclayout-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .questionnarire-management-page .accounts-boxlayouts .ac-boclayout-header .boxlayouts-edit .fill-btn {
+        margin-top: 14px;
+    }
+    .questionarie-edit .selected-box-ques .action-block {
+        display: none;
+    }
+    .questionarie-edit .mobile-action {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 42px;
+        width: 16px;
+    }
+    .questionarie-edit .sl-box-edit {
+        position: relative;
+    }
+    .dash-candidate .activejobs-detaile .job-posts {
+        flex-direction: column-reverse;
+    }
+    .dash-candidate .activejobs-detaile .job-post-data {
+        width: 100%;
+        padding-right: 0;
+    }
+    .dash-candidate .activejobs-detaile .job-posts .job-post-status {
+        width: 100%;
+        margin-bottom: 14px;
+    }
+    .dash-candidate .activejobs-detaile .job-posts {
+        flex-direction: column;
+    }
+    .dash-candidate .activejobs-detaile .job-table .first-data {
+        margin-bottom: 13px;
+    }
+    .dash-candidate .job-post-status .fill-btn {
+        width: calc(100% - 56px);
+    }
+    .dash-candidate .appliedjobs-detailed .div-table-wrapper .div-column:first-child {
+        padding-left: 0;
+    }
+    .dash-candidate .appliedjobs-detailed .div-table-wrapper .div-column {
+        padding: 0;
+    }
+    .dash-candidate .appliedjobs-detailed .div-table-wrapper .div-column:first-child p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #212b36 !important;
+    }
+    .dash-candidate .appliedjobs-detailed .div-table-wrapper .div-column:nth-child(4) p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #212b36 !important;
+        margin-top: 12px;
+    }
+    .dash-candidate .appliedjobs-detailed .div-table-wrapper .div-column {
+        margin-bottom: 4px;
+    }
+
+    .ac-payment-page .payment-tabed-item {
+        border-bottom: 1px solid #ededed;
+        border-top: 1px solid #ededed;
+    }
+    .req-submit-candidate
+        .candidate-submital-main
+        .candidate-submital-in
+        .submittal-candidate-form
+        .diversity-selectcs {
+        margin-top: 11px;
+        margin-bottom: 15px;
+    }
+    .req-submit-candidate
+        .candidate-submital-main
+        .candidate-submital-in
+        .submittal-candidate-form
+        .candidate-submittal-resume {
+        margin-top: 0px;
+        margin-bottom: 22px;
+    }
+    .dashboard-compnay .dashboard-sidebar {
+        display: none;
+    }
+    .user-management-page .user-management-tabs ul {
+        border-bottom: 1px solid #ededed;
+    }
+    .ac-payment-page .subscription-approvals-tab .div-table-wrapper .div-column {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+    }
+    .ac-payment-page .subscription-approvals-tab .div-table-wrapper .div-column p {
+        font-family: "Inter", sans-serif;
+        color: #212b36 !important;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+    }
+    .ac-payment-page .subscription-approvals-tab .div-table-wrapper .div-column:last-child p {
+        color: #4c65ff !important;
+    }
+    .ac-payment-page .subscription-approvals-tab .div-table-wrapper .div-row {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 11px;
+        padding-top: 17px;
+        border-top: 1px solid #ededed;
+    }
+    .ac-payment-page .subscription-approvals-tab .div-table-wrapper .div-column:first-child {
+        padding-bottom: 12px;
+    }
+    .ac-payment-page .subscription-approvals-tab .div-table-wrapper .div-column:last-child {
+        padding-top: 8px;
+    }
+    .ac-payment-page .subscription-approvals-tab .div-table-wrapper .div-column {
+        padding-bottom: 4px;
+    }
+}
+
+@media (max-width: 767px) {
+    .active-jobnumeric .job-table .last-data {
+        width: auto;
+    }
+    .active-jobnumeric .job-table .last-data .job-table-data {
+        width: 33.33%;
+        margin-bottom: 21px;
+    }
+
+    .active-jobnumeric .job-posts {
+        padding-bottom: 7px;
+    }
+    .signup-compnay {
+        padding-bottom: 40px;
+    }
+    .dashboard-compnay .dash-heads {
+        margin-top: 20px;
+        margin-bottom: 28px;
+    }
+    .dash-compnaytitle h5 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .dashboard-compnay .dash-heads .dash-postjob .fill-btn {
+        width: 120px;
+    }
+    .dashboards-main .active-jobs-dash .active-job-head h6 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .dashboard-compnay .dashboards-main .active-jobs-dash .active-job-head {
+        padding-top: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 17px;
+    }
+    .dashboard-compnay .dashboards-main .active-jobs-dash .activejobs-detailed {
+        padding-top: 6px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 20px;
+    }
+    .dashboard-compnay .dashboards-main .active-jobs-dash .activejobs-detailed .active-jobnumeric .actjob-requests {
+        display: none;
+    }
+    .actjob-requests-mobo .act-jobreq-iteam {
+        margin-bottom: 21px;
+    }
+    .dashboard-compnay .dashboards-main .active-jobs-dash .activejobs-detailed .active-jobnumeric .actjob-package {
+        margin-bottom: 21px;
+    }
+    .dashboard-compnay .dashboards-main .active-jobs-dash .activejobs-detailed .active-jobnumeric {
+        margin-top: 12px;
+    }
+    .dashboard-compnay .dashboards-main .actjobs-boxstatus .actjob-status-item {
+        margin-bottom: 16px;
+    }
+    .dashboard-compnay .dashboards-main .actjobs-boxstatus .actjob-status-item {
+        padding-top: 10px;
+        padding-left: 16px;
+        padding-bottom: 11px;
+        padding-right: 16px;
+    }
+    .dashboard-compnay .dashboards-main .actjobs-boxstatus .actjob-status-item span {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .dashboard-compnay .dashboards-main .actjobs-boxstatus .actjob-status-item h5 {
+        margin-bottom: 3px;
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .dashboards-main h6 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .dashboard-compnay .dashboards-main .copm-performance-dash .copm-perform-head {
+        padding-top: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 17px;
+    }
+
+    .dashboard-compnay .dashboards-main .dashboard-sidebar .getting-started-dash {
+        padding-top: 18px;
+        padding-bottom: 17px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .dashboard-compnay .dashboards-main .dashboard-sidebar .updates-notification-dash {
+        padding-top: 18px;
+        padding-bottom: 17px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .company-signup-3 .compnay-signup-pricing .copnay-pricing-flex {
+        flex-direction: column;
+    }
+    .company-signup-3
+        .compnay-signup-pricing
+        .copnay-pricing-flex
+        .pricing-chos-left
+        .pricing-choose-panels
+        .pricing-chos-panel
+        .pricing-main-pills
+        .pricing-nav-item
+        .pricing-nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .company-signup-3
+        .compnay-signup-pricing
+        .copnay-pricing-flex
+        .pricing-chos-left
+        .pricing-choose-panels
+        .pricing-chos-panel
+        .pricing-main-pills {
+        margin-bottom: 24px;
+        justify-content: flex-start;
+    }
+    .company-signup-3 .compnay-signup-pricing .copnay-pricing-flex .pricing-chos-right .hiring-efforts {
+        margin-left: 0;
+        margin-top: 19px;
+    }
+    .company-signup-3
+        .compnay-signup-pricing
+        .copnay-pricing-flex
+        .pricing-chos-left
+        .pricing-choose-panels
+        .pricing-chos-head {
+        margin-bottom: 15px;
+    }
+    .company-signup-3 .compnay-signup-pricing .copnay-pricing-flex .pricing-chos-right .hiring-efforts {
+        padding-top: 20px;
+        padding-bottom: 23px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .company-signup-3
+        .compnay-signup-pricing
+        .copnay-pricing-flex
+        .pricing-chos-left
+        .pricing-choose-panels
+        .pricing-chos-panel
+        .pricing-cho-tab
+        .pricibg-chos-tabin {
+        padding: 16px;
+        padding-top: 22px;
+    }
+    .company-signup-3 {
+        padding-top: 40px;
+        padding-bottom: 48px;
+    }
+    .company-signup-3 .process-progress {
+        padding-bottom: 41px;
+    }
+    .company-signup-3
+        .compnay-signup-pricing
+        .copnay-pricing-flex
+        .pricing-chos-left
+        .pricing-choose-panels
+        .pricing-chos-panel
+        .pricing-main-pills
+        .pricing-nav-item
+        .pricing-nav-link {
+        width: 254px;
+    }
+    .signup5-payment-succes {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background: #f6f7ff;
+    }
+    .comp-jobpost4 .process-progress {
+        width: 100%;
+    }
+    .previews-jobpost .mob-reverse {
+        flex-direction: column-reverse;
+    }
+    .why-work-about {
+        display: none;
+    }
+    .why-about-mobo {
+        display: block;
+    }
+    .comp-jobpost4 {
+        padding-top: 24px;
+        padding-bottom: 40px;
+        background: #f6f7ff;
+    }
+    .comp-jobpost4 .process-progress {
+        padding-bottom: 24px;
+    }
+    .comp-jobpost4 .previews-jobpost .prview-jobpost-sidebar {
+        margin-top: 0;
+    }
+    .comp-jobpost4 .previews-jobpost .prview-jobpost-sidebar .payfor-approval {
+        padding-top: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+    }
+    .comp-jobpost4 .previews-jobpost .prview-jobpost-left .preview-jobpost-head {
+        margin-bottom: 17px;
+    }
+    .comp-jobpost4 .previews-jobpost .prview-jobpost-sidebar .payfor-approval {
+        margin-bottom: 31px;
+    }
+    .comp-jobpost4 .previews-jobpost .prview-jobpost-left .previw-jobpost-in {
+        padding-top: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 15px;
+    }
+    .comp-jobpost4 .previews-jobpost .prview-jobpost-left .previw-jobpost-in .previewjob-in-head {
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 23px;
+        margin-bottom: 9px;
+    }
+    .why-work-about.why-about-mobo {
+        margin-top: 16px;
+        margin-top: 16px;
+        padding-top: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 23px;
+    }
+    .why-work-about .whywork-about-item:first-child {
+        margin-bottom: 21px;
+    }
+    .comp-signup4-payment {
+        padding-top: 24px;
+        padding-bottom: 40px;
+    }
+    .comp-signup4-payment .process-progress {
+        padding-bottom: 24px;
+    }
+    .comp-signup4-payment .signup4-pay-inn .payin-left {
+        margin-bottom: 32px;
+    }
+    .comp-signup4-payment .signup4-pay-inn .payin-right .payin-summary {
+        padding-top: 15px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 18px;
+    }
+
+    .dropdowns + ul {
+        display: none;
+    }
+    .dropdowns.active + ul {
+        display: block;
+        top: 41px;
+    }
+    .left-side-bar {
+        height: auto;
+        min-height: auto !important;
+    }
+    .dropdowns {
+        background: #ffffff;
+        /* box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.25); */
+        border-radius: 8px;
+        margin-bottom: 0;
+        cursor: pointer;
+        position: relative;
+        padding: 10px 16px 10px 16px;
+        display: block;
+        text-decoration: none;
+        color: #212b36;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+    }
+    .dropdowns:after {
+        content: "";
+        position: absolute;
+        background: url(../img/chevron-down.svg);
+        background-position: center;
+        background-size: cover;
+        height: 24px;
+        width: 24px;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+    }
+    .dropdowns.active:after {
+        transform: translateY(-50%) rotate(-180deg);
+    }
+    .dropdowns.active:before {
+        border: none;
+        display: none;
+    }
+    ul.dropdowns-toggles {
+        position: absolute;
+        z-index: 53;
+        width: calc(100% - 16px);
+        background: #f5f5f5;
+        padding: 15px 0;
+        border-radius: 8px;
+        box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.25);
+    }
+    .profiles-pages .left-sides-bar {
+        padding: 0px 0;
+        padding-top: 0px;
+        margin-bottom: 16px;
+    }
+    .left-sides-bar ul li a {
+        font-size: 14px;
+    }
+    .left-sides-bar .active a {
+        font-size: 14px;
+    }
+    .accounts-boxlayouts .ac-boclayout-header {
+        padding-top: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 17px;
+    }
+    .accounts-boxlayouts .ac-boxlayouts-desc {
+        padding-top: 20px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 20px;
+    }
+    .accounts-boxlayouts {
+        margin-bottom: 16px;
+    }
+    .profiles-pages {
+        padding-top: 16px;
+        padding-bottom: 40px;
+    }
+    .mysubscription-page .accounts-boxlayouts .ac-boxlayouts-desc {
+        padding-top: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 20px;
+    }
+    .mysubscription-page .upgrade-subscription-box {
+        padding-top: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 20px;
+    }
+    .notification-setting-page .notification-for-email {
+        padding-top: 20px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 32px;
+    }
+    .email-updates-request {
+        padding-top: 0;
+    }
+    .ac-payment-page .accounts-boxlayouts .ac-boclayout-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .ac-payment-page .trans-date-update form {
+        flex-direction: column;
+    }
+    .ac-payment-page .trans-date-update {
+        margin-top: 22px;
+        width: 100%;
+    }
+    .ac-payment-page .from-to-ranges {
+        width: 100%;
+    }
+    .ac-payment-page .from-torange-btn {
+        width: 100%;
+    }
+    .ac-payment-page .trans-date-update .border-btn {
+        max-width: 100%;
+        margin-top: 16px;
+    }
+    .ac-payment-page .from-to-ranges input:last-child {
+        margin-right: 0;
+    }
+    .ac-payment-page .accounts-boxlayouts .ac-boclayout-header .boxlayouts-edit {
+        width: 100%;
+        margin-left: 0;
+    }
+    .ac-payment-page .from-to-ranges {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ac-payment-page .trans-date-update input {
+        max-width: 100%;
+    }
+    .ac-payment-page .trans-date-update input {
+        padding: 0;
+    }
+
+    .ac-payment-page .subscription-approvals-tab ul {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .ac-payment-page .subscription-approvals-tab ul li .tab-link {
+        padding-top: 14px;
+        padding-bottom: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .ac-payment-page .payment-tabed-item {
+        border-bottom: 1px solid #ededed;
+    }
+    .dashboard-compnay .dashboards-main .copm-performance-dash .comp-performance-detailed {
+        padding-top: 22px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 20px;
+    }
+    .dashboard-compnay
+        .dashboards-main
+        .copm-performance-dash
+        .comp-performance-detailed
+        .copm-perfromance-graph
+        .req-cspanel
+        ul
+        li
+        .tab-link {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+    .dashboard-compnay {
+        margin-bottom: 40px;
+    }
+    .req-submit-candidate .flex-reverse-mobo {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+    .req-submit-candidate .candidate-submittal-sidebar .job-postdesc-sec {
+        display: none;
+    }
+    .req-submit-candidate {
+        margin-top: 24px;
+        margin-bottom: 40px;
+    }
+    .req-submit-candidate .margins-62 {
+        margin-top: 0px;
+    }
+    .req-submit-candidate .candidate-submittal-sidebar {
+        margin-top: 24px;
+        margin-bottom: 23px;
+        overflow-y: unset;
+    }
+    .req-submit-candidate .candidate-submittal-sidebar .job-posdetails-first {
+        padding-bottom: 0;
+    }
+    .req-submit-candidate .candidate-submital-main .candidate-submital-in {
+        margin-top: 17px;
+    }
+    .req-submit-candidate .candidate-submital-main .candidate-submital-in {
+        padding: 16px;
+        padding-top: 18px;
+    }
+    .req-submit-candidate .candidate-submital-main .candidate-submital-in .submittal-candidate-form .ck {
+        margin-bottom: 18px;
+    }
+    .req-submit-candidate
+        .candidate-submital-main
+        .candidate-submital-in
+        .submittal-candidate-form
+        .reqsubmit-candidate-btns
+        .border-btn {
+        width: 100%;
+        max-width: 144px;
+    }
+    .req-submit-candidate
+        .candidate-submital-main
+        .candidate-submital-in
+        .submittal-candidate-form
+        .reqsubmit-candidate-btns
+        .fill-btn {
+        width: 100%;
+        max-width: 144px;
+    }
+    .req-submit-candidate .process-progress {
+        margin-bottom: 24px;
+    }
+    .req-submit-candidate .candidate-submittal-sidebar {
+        margin-top: 0;
+    }
+    .req-submit-candidate .process-progress {
+        width: auto;
+    }
+    .req-submit-candidate .process-progress .info-progress {
+        width: 100%;
+    }
+    .recruiter-candidate-dashbox {
+        padding-top: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 10px;
+    }
+    .job-perfromance-payout-dashmain .job-pp-item .pp-dash-head {
+        padding-top: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 17px;
+    }
+    .job-perfromance-payout-dashmain .job-pp-item .pp-dash-detailed {
+        padding-top: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 20px;
+    }
+
+    .questionnarire-management-page .questionarie-mangement-create {
+        padding: 16px;
+    }
+    /* .user-management-page .user-management-tabs ul {
+        padding: 0;
+    } */
+    /* .user-management-tabs .div-table-wrapper .div-row {
+        padding-left: 0;
+        padding-right: 0;
+    } */
+
+    .user-management-page .user-permission-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .terms-condition {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    .aboutus-page {
+        padding-top: 20px;
+        padding-bottom: 43px;
+    }
+    .aboutus-page .aboutus-pagein .aboutpage-banner {
+        padding-top: 16px;
+        padding-bottom: 21px;
+    }
+    .aboutpage-content h6 {
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 10px;
+    }
+    .aboutus-page .aboutus-pagein .aboutpage-content p {
+        margin-bottom: 25px;
+    }
+    .aboutus-page .aboutus-pagein h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .dash-candidate .activejobs-detaile .job-table {
+        display: block;
+    }
+    .dash-candidate .activejobs-detaile .job-table .last-data .job-table-data {
+        width: 33.33%;
+        margin-bottom: 28px;
+    }
+    .recruiter-candidate-dashbox .reqstudent-dash-head h5 {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .recruiter-candidate-dashbox .reqstudent-dash-head {
+        margin-bottom: 8px;
+    }
+
+    .accounts-boxlayouts .ac-boclayout-header .boxheader-title h6 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .updates-page .updates-page-item .updates-itemin .updates-durationdate {
+        display: none;
+    }
+    .updates-page .updates-page-item {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .updates-page .updates-page-item .updates-itemin {
+        padding-top: 17px;
+        padding-bottom: 14px;
+    }
+    .updates-page .updates-page-head {
+        padding-top: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 17px;
+    }
+    .updates-page .updates-page-head h6 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .accounts-boxlayouts .ac-boxlayouts-desc .col-md-6:last-child .boxlayout-infoitem {
+        margin-bottom: 0;
+    }
+    .req-submit-candidate
+        .candidate-submital-main
+        .candidate-submital-in
+        .review-submital-form
+        .review-submittal-item
+        .diversity-labels {
+        margin-bottom: 17px;
+        margin-top: 0;
+    }
+    .req-submit-candidate .candidate-submital-main .review-submital-head a {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .dash-candidate .appliedjobs-detailed .div-table-wrapper .div-row {
+        padding: 14px 16px;
+        position: relative;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .company-signup-3
+        .compnay-signup-pricing
+        .copnay-pricing-flex
+        .pricing-chos-left
+        .pricing-choose-panels
+        .pricing-chos-panel
+        .pricing-main-pills
+        .pricing-nav-item
+        .pricing-nav-link {
+        width: 168px;
+    }
+    .company-signup-3 .process-progress {
+        padding-bottom: 25px;
+    }
+    .company-signup-3 {
+        padding-top: 24px;
+        padding-bottom: 40px;
+    }
+    .signup5-payment-succes .payment-suc-bottom .payment-sucbottom-btn a {
+        width: 164px;
+        font-size: 13px;
+    }
+    .signup5-payment-succes .payment-suc-bottom .payment-sucbottom-btn .border-btn {
+        margin-right: 8px;
+    }
+    .signup5-payment-succes .hrs-success {
+        margin-bottom: 14px;
+    }
+    .signup5-payment-succes .payment-suc-bottom .payment-sucbottom-btn {
+        margin-top: 18px;
+    }
+    .req-submit-candidate .process-progress .info-progress {
+        width: 100%;
+    }
+    .user-management-page .accounts-boxlayouts .ac-boclayout-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .user-management-page .accounts-boxlayouts .ac-boclayout-header .boxheader-title {
+        margin-bottom: 14px;
+    }
+    .req-add-user-modal .modal-footer button {
+        width: 144px;
+    }
+    .notification-for-email .email-sending-title p.noti-email-title {
+        margin-right: 16px;
+    }
+    .questionarie-mangement-create .que-add-question .que-ans-type {
+        display: block;
+    }
+    .questionnarire-management-page .questionarie-mangement-create .que-ans-type .first {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 16px;
+    }
+    .questionnarire-management-page .questionarie-mangement-create .JQ-btn-block .border-btn {
+        width: 144px;
+    }
+    .questionnarire-management-page .questionarie-mangement-create .JQ-btn-block .fill-btn {
+        width: 144px;
+    }
+    .questionnarire-management-page .accounts-boxlayouts .ac-boclayout-header .boxheader-title h6 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .dash-candidate .activejobs-detaile .job-posts {
+        padding: 16px 16px 7px 16px;
+    }
+    .dash-candidate .job-post-status .fill-btn {
+        margin-right: 16px;
+    }
+    .company-signup-3
+        .compnay-signup-pricing
+        .copnay-pricing-flex
+        .pricing-chos-left
+        .pricing-choose-panels
+        .pricing-chos-head
+        h5 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .company-signup-3
+        .compnay-signup-pricing
+        .copnay-pricing-flex
+        .pricing-chos-right
+        .hiring-efforts
+        .hiring-efort-head
+        h5 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .comp-signup4-payment .signup4-pay-inn .payin-left h5 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .save-cancel-edit button {
+        width: 144px;
+    }
+    .updates-page {
+        margin-top: 16px;
+        margin-bottom: 40px;
+    }
+    .general-btn-togethers button {
+        width: 144px !important;
+    }
+    .user-management-page .accounts-boxlayouts .ac-boclayout-header .boxlayouts-edit {
+        margin-left: 0;
+    }
+    .user-management-page .user-management-tabs ul {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+    .questionnarire-management-page .accounts-boxlayouts .ac-boclayout-header .boxlayouts-edit {
+        margin-left: 0;
+    }
+}
+@media (max-width: 359px) {
+    .dash-compnaytitle h5 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .dashboard-compnay .dash-heads .dash-postjob .fill-btn {
+        width: auto;
+        font-size: 12px;
+    }
+    .dashboard-compnay
+        .dashboards-main
+        .copm-performance-dash
+        .comp-performance-detailed
+        .copm-perfromance-graph
+        .req-cspanel
+        ul
+        li {
+        padding-right: 24px;
+    }
+    .company-signup-3
+        .compnay-signup-pricing
+        .copnay-pricing-flex
+        .pricing-chos-left
+        .pricing-choose-panels
+        .pricing-chos-panel
+        .pricing-main-pills
+        .pricing-nav-item
+        .pricing-nav-link {
+        width: 145px;
+    }
+    .req-submit-candidate
+        .candidate-submital-main
+        .candidate-submital-in
+        .submittal-candidate-form
+        .reqsubmit-candidate-btns
+        .border-btn {
+        width: 100%;
+        max-width: 120px;
+    }
+    .req-submit-candidate
+        .candidate-submital-main
+        .candidate-submital-in
+        .submittal-candidate-form
+        .reqsubmit-candidate-btns
+        .fill-btn {
+        width: 100%;
+        max-width: 120px;
+    }
+    .req-add-user-modal .modal-footer button {
+        width: 122px;
+    }
+    .comp-signup4-payment .signup4-pay-inn .payin-left .pay-methodin label.rd {
+        margin-bottom: 0;
+        padding-left: 27px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .comp-signup4-payment .signup4-pay-inn .payin-left .pay-methodin label.rd .payee-img {
+        margin-left: 12px;
+    }
+    .questionnarire-management-page .questionarie-mangement-create .JQ-btn-block .fill-btn {
+        width: 120px;
+    }
+    .questionnarire-management-page .questionarie-mangement-create .JQ-btn-block .border-btn {
+        width: 120px;
+    }
+    .questionnarire-management-page .accounts-boxlayouts .ac-boclayout-header .boxheader-title h6 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .save-cancel-edit button {
+        width: 122px;
+    }
+    .general-btn-togethers button {
+        width: 122px !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .updates-page {
+        margin-top: 24px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .signup-compnay {
+        padding-bottom: 50px;
+    }
+    .dashboard-compnay .dashboards-main .dashboard-sidebar .getting-started-dash {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .dashboard-compnay .dashboards-main .dashboard-sidebar .updates-notification-dash {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .dashboard-compnay
+        .dashboards-main
+        .dashboard-sidebar
+        .getting-started-dash
+        .verify-mail-dash
+        .verify-maindash-item {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-bottom: 14px;
+    }
+    .getting-started-dash .verify-mail-dash .verify-maindash-item p.ts {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    /* .dashboard-compnay .dashboards-main .active-jobs-dash .active-job-head {
+        padding-top: 18px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 20px;
+    } */
+    /* .dashboard-compnay .dashboards-main .copm-performance-dash .copm-perform-head {
+        padding-top: 18px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 20px;
+    } */
+    .dashboard-compnay .dashboards-main h6 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .dashboard-compnay
+        .dashboards-main
+        .active-jobs-dash
+        .activejobs-detailed
+        .active-jobnumeric
+        .actjob-requests
+        .act-jobreq-iteam {
+        padding-left: 0;
+        padding-right: 20px;
+        margin-bottom: 14px;
+    }
+    .actjob-requests {
+        margin-top: 18px;
+    }
+    /* .dashboard-compnay .dashboards-main .active-jobs-dash .activejobs-detailed {
+            padding-left: 18px;
+            padding-right: 18px;
+        } */
+    .dashboard-compnay .dashboards-main .actjobs-boxstatus .actjob-status-item {
+        /* padding-top: 18px;
+        padding-left: 16px;
+        padding-bottom: 18px;
+        padding-right: 16px; */
+        margin-bottom: 24px;
+    }
+    .dashboard-compnay .dashboards-main .actjobs-boxstatus .actjob-status-item span {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    /* .dashboard-compnay .dashboards-main .copm-performance-dash .comp-performance-detailed {
+        padding-left: 18px;
+        padding-right: 18px;
+    } */
+    .company-signup-3
+        .compnay-signup-pricing
+        .copnay-pricing-flex
+        .pricing-chos-left
+        .pricing-choose-panels
+        .pricing-chos-panel
+        .pricing-main-pills
+        .pricing-nav-item
+        .pricing-nav-link {
+        width: 162px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .company-signup-3 .compnay-signup-pricing .copnay-pricing-flex .pricing-chos-right .hiring-efforts {
+        padding-top: 22px;
+        padding-bottom: 35px;
+        padding-left: 18px;
+        padding-right: 18px;
+        margin-left: 35px;
+    }
+    .company-signup-3 .compnay-signup-pricing h5 {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .company-signup-3
+        .compnay-signup-pricing
+        .copnay-pricing-flex
+        .pricing-chos-left
+        .pricing-choose-panels
+        .pricing-chos-head {
+        margin-bottom: 38px;
+    }
+    .signup5-payment-succes {
+        padding-top: 68px;
+        padding-bottom: 84px;
+    }
+    .comp-jobpost4 .previews-jobpost .prview-jobpost-left .previw-jobpost-in {
+        padding-top: 26px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 27px;
+    }
+    .comp-jobpost4 {
+        padding-bottom: 66px;
+    }
+    .comp-signup4-payment {
+        padding-bottom: 104px;
+    }
+    .profiles-pages .left-sides-bar ul li a {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .profiles-pages .left-sides-bar ul li.active a {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .profiles-pages .left-sides-bar ul li a:hover {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .accounts-boxlayouts .ac-boclayout-header {
+        padding-top: 20px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 20px;
+    }
+    .accounts-boxlayouts .ac-boxlayouts-desc {
+        padding-top: 20px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 20px;
+    }
+    .mysubscription-page .accounts-boxlayouts .ac-boxlayouts-desc {
+        padding-top: 20px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 20px;
+    }
+    .mysubscription-page .upgrade-subscription-box {
+        padding-top: 20px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 20px;
+    }
+    .notification-setting-page .notification-for-email {
+        padding-top: 20px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 28px;
+    }
+    .ac-payment-page .accounts-boxlayouts .ac-boclayout-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .ac-payment-page .accounts-boxlayouts .boxheader-title {
+        padding-bottom: 20px;
+    }
+    .ac-payment-page .subscription-approvals-tab ul {
+        padding-left: 18px;
+    }
+    .ac-payment-page .subscription-approvals-tab .acpayment-tabcontent table tr td:first-child {
+        padding-left: 18px;
+    }
+    .subscription-approvals-tab ul li .tab-link {
+        padding: 18px;
+    }
+    .dashboard-compnay {
+        margin-bottom: 62px;
+    }
+    .req-submit-candidate .candidate-submittal-sidebar {
+        max-height: 500px;
+    }
+    .req-submit-candidate .candidate-submital-main .candidate-submital-in {
+        padding-top: 21px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 21px;
+    }
+    .req-submit-candidate .process-progress {
+        width: auto;
+        margin-bottom: 48px;
+    }
+    .req-submit-candidate {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+    /* .recruiter-candidate-dashbox {
+        padding-top: 18px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 20px;
+    } */
+    /* .job-perfromance-payout-dashmain .job-pp-item .pp-dash-head {
+        padding-top: 18px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 20px;
+    } */
+    /* .job-perfromance-payout-dashmain .job-pp-item .pp-dash-detailed {
+        padding-left: 18px;
+        padding-right: 18px;
+    } */
+    .comp-signup4-payment .signup4-pay-inn .payin-right .payin-summary {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 22px;
+        padding-bottom: 22px;
+    }
+    .comp-signup4-payment .signup4-pay-inn .payin-left {
+        max-width: 310px;
+    }
+    .updates-page {
+        margin-top: 24px;
+        margin-bottom: 54px;
+    }
+    .accounts-boxlayouts .ac-boclayout-header .boxlayouts-edit {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .signup-compnay {
+        padding-bottom: 60px;
+    }
+    .dashboard-compnay
+        .dashboards-main
+        .active-jobs-dash
+        .activejobs-detailed
+        .active-jobnumeric
+        .actjob-requests
+        .act-jobreq-iteam {
+        padding-left: 0;
+        padding-right: 24px;
+        margin-bottom: 12px;
+    }
+    .dashboard-compnay .dashboards-main .active-jobs-dash .activejobs-detailed .active-jobnumeric .actjob-requests {
+        margin-top: 18px;
+    }
+    .dashboard-compnay .dashboards-main .actjobs-boxstatus .actjob-status-item {
+        padding-left: 18px;
+        padding-right: 18px;
+        margin-bottom: 16px;
+    }
+    .company-signup-3
+        .compnay-signup-pricing
+        .copnay-pricing-flex
+        .pricing-chos-left
+        .pricing-choose-panels
+        .pricing-chos-head {
+        margin-bottom: 52px;
+    }
+    .signup5-payment-succes {
+        padding-top: 106px;
+        padding-bottom: 138px;
+    }
+    .comp-signup4-payment {
+        padding-bottom: 140px;
+    }
+    .profiles-pages .left-sides-bar ul li a {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .profiles-pages .left-sides-bar ul li.active a {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .profiles-pages .left-sides-bar ul li a:hover {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .user-management-tabs .div-table-wrapper .div-column .ll {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .user-management-tabs .div-table-wrapper {
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+    .user-management-tabs .div-table-wrapper .div-column {
+        white-space: nowrap;
+    }
+}
+@media (min-width: 768px) {
+    .actjob-requests-mobo.row {
+        display: none;
+    }
+    .why-work-about.why-about-mobo {
+        display: none;
+    }
+    section.profiles-pages .left-sides-bar .dropdowns {
+        display: none;
+    }
+}
+@media (min-width: 992px) {
+    .payment-tab-mobile {
+        display: none;
+    }
+    .dash-candidate .appliedjobs-detailed .div-table-wrapper .div-column:last-child {
+        text-align: right;
+    }
+    .dash-candidate .appliedjobs-detailed .div-table-wrapper .div-column {
+        padding-top: 22px;
+        padding-bottom: 26px;
+    }
+    .dash-candidate .appliedjobs-detailed .div-table-wrapper .div-row:first-child .div-column {
+        padding-top: 9px;
+        padding-bottom: 11px;
+    }
+    .questionnarire-management-page .questionarie-mangement-home .div-table-wrapper .div-column:last-child {
+        text-align: right;
+    }
+}
+@media (min-width: 1200px) {
+    .company-signup-3 .compnay-signup-pricing .copnay-pricing-flex .pricing-chos-right .hiring-efforts {
+        width: 576px;
+    }
+    .req-submit-candidate .candidate-submital-main {
+        max-width: 792px;
+    }
+    .job-perfromance-payout-dashmain .job-pp-item .pp-dash-detailed.payout-dash-detail {
+        padding-top: 43px;
+        padding-bottom: 60px;
+    }
+    .questionarie-mangement-home .div-table-wrapper .div-column:first-child {
+        width: 56%;
+    }
+    .ac-payment-page .subscription-approvals-tab .div-table-wrapper .div-column:nth-child(2) {
+        width: 52%;
+    }
+}
+
+/* @media (min-width: 1400px) {
+}
+
+@media (min-width: 1366px) {
+}
+
+@media (max-width: 1365px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (max-width: 1199px) {
+}
+
+
+
+
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 575px) {
+}
+
+@media (max-width: 450px) {
+}
+
+@media (max-width: 359px) {
+}
+
+@supports (-webkit-touch-callout: none) {
+} */

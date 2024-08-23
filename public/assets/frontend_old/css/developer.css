@@ -1,0 +1,68 @@
+.pac-container { width: 300px !important;  }
+label.error {
+  color: red !important;
+}
+
+.blockMsg {
+  z-index: 999999999999999 !important;
+  background-color: #65b1b5 !important;
+  color: #fff !important;
+}
+
+.blockMsg h1 {
+  color: #fff !important;
+}
+
+.error {
+  color: red;
+}
+
+.pblur a {
+  color: #919EAB !important;
+}
+
+.uploads-img span.hidden-xs {
+  color: #fff
+}
+
+.profile-banner-name h2::after {
+  display: none;
+}
+
+.btn-primary {
+  background-color: #11B0B7;
+  border-color: #11B0B7;
+}
+
+.btn-primary:hover {
+  background-color: #0E959B;
+  border-color: #0E959B;
+}
+
+.ucase {
+  text-transform: uppercase;
+}
+
+.location {
+  width: 180px;
+}
+.location input{
+  padding-left: 8px
+}
+
+.p-with-success p::after {
+  display: none;
+}
+
+.p-with-success p{
+  padding-right: 3px;
+}
+.facebook-btn,.google-btn{
+  text-decoration: none !important;
+}
+.facebook-btn:hover,.google-btn:hover{
+  color: #fff;
+}
+.only-white,.only-white:hover{
+  color: #fff !important;
+}

@@ -1,0 +1,200 @@
+.hide_column {
+    display: none;
+}
+.search-with-button {
+    width: 400px;
+    margin-left: auto;
+    display: flex;
+    margin-bottom: 10px;
+}
+.search-with-button select{
+    width: 153px;
+    border-radius: 0%;
+    height: 40px;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+}
+.search-with-button button {
+    width: 40px;
+    height: 40px;
+    background-color: #3f6ad8;
+    color: #fff;
+    border: none;
+    border-radius: 0px;
+    /* margin-left: 10px; */
+}
+.search-with-button input {
+    width: calc(100% - 40px);
+    padding-left: 10px;
+}
+.joblist-loadmore button {
+    margin: 0 auto;
+    padding: 0 24px;
+    width: auto;
+}
+.job-data-wrapper .joblist-loadmore {
+    padding: 20px 0;
+}
+.job-header .searchbar-btn {
+    width: 368px;
+}
+button.search-btn {
+    cursor: pointer;
+}
+.show-more {
+    font-family: "Inter", sans-serif;
+    color: #4c65ff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+}
+.filter-section .job-filter-btn .fill-btn {
+    margin-left: 16px;
+}
+.loader-bg {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 99999;
+}
+
+.loader-bg.d-none {
+    display: none;
+}
+
+.loader-bg section {
+    min-width: 200px;
+    width: 33.33%;
+    height: 200px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.loader-11 {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: #fff #fff transparent transparent;
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite;
+}
+.loader-11:after,
+.loader-11:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent transparent #4c65ff #4c65ff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-animation: rotationBack 0.5s linear infinite;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+}
+.loader-11:before {
+    width: 32px;
+    height: 32px;
+    border-color: #fff #fff transparent transparent;
+    -webkit-animation: rotation 1.5s linear infinite;
+    animation: rotation 1.5s linear infinite;
+}
+
+/* keyFrames */
+@-webkit-keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.detail-role-card.card {
+    -webkit-box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+.description-popup .modal-dialog {
+    max-width: 80% !important;
+}
+.description-popup .modal-footer button:not(:last-child) {
+    margin-right: 10px;
+}
+.card-body-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.card-body-header a{
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+.card-body-header h5{
+    margin-bottom: 0;
+}
+.company-list-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.button-options{
+    display: flex;
+    align-items: center;
+}
+.threedot-toggle{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}

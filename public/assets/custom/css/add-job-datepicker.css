@@ -1,0 +1,17 @@
+.hide_column {
+    display: none;
+}
+.daterangepicker{
+    z-index: 1800 !important;
+}
+.datepicker-container { 
+    margin-left: 100px;
+    z-index:1800 !important;
+}
+.datepicker-panel>ul>li.picked, .datepicker-panel>ul>li.picked:hover{
+    background:#3f6ad8 !important;
+}
+.datepicker-panel>ul>li.highlighted{
+    background-color:#e1dfdb !important;
+    color: black !important;
+}

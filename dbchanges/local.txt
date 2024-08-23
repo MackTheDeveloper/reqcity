@@ -1,0 +1,431 @@
+Reqcity DB changes
+
+Milan 06/12/2021
+
+New table (company_subscription)
+CREATE TABLE `reqcity`.`company_subscription` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `plan_id` INT(11) NOT NULL , `company_id` INT(11) NOT NULL , `email` VARCHAR(255) NOT NULL , `plan_type` ENUM('Monthly','Yearly') NOT NULL , `amount` VARCHAR(255) NOT NULL , `status` INT NOT NULL DEFAULT '1' , `payment_id` VARCHAR(255) NOT NULL , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , `deleted_at` DATETIME NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+Dummy Entry
+
+INSERT INTO `company_subscription` (`id`, `plan_id`, `company_id`, `email`, `plan_type`, `amount`, `status`, `payment_id`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', '1', 'milan@gmail.com', 'monthly', '1200', '1', '14562859', NULL, NULL, NULL), (NULL, '2', '2', 'test@mymail.com', 'monthly', '1400', '1', '1452689', NULL, NULL, NULL);
+
+New table (companies)
+CREATE TABLE `reqcity`.`companies` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `email` VARCHAR(255) NOT NULL , `phone` VARCHAR(15) NOT NULL , `status` INT NOT NULL DEFAULT '1' , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , `deleted_at` DATETIME NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+Dummy Entry
+
+INSERT INTO `companies` (`id`, `name`, `email`, `phone`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Magneto IT Solutions', 'magneto@gmail.com', '8000644182', '1', NULL, NULL, NULL), (NULL, 'Infosys ', 'info@infosys.com', '8000644182', '1', NULL, NULL, NULL);
+
+New Table (recruiter_subscription)
+CREATE TABLE `reqcity`.`recruiter_subscription` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `plan_id` INT(11) NOT NULL , `recruiter_id` INT(11) NOT NULL , `email` VARCHAR(255) NOT NULL , `plan_type` ENUM('Monthly','Yearly') NOT NULL , `amount` VARCHAR(255) NOT NULL , `status` INT NOT NULL DEFAULT '1' , `payment_id` VARCHAR(255) NOT NULL , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , `deleted_at` DATETIME NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+Dummy Data
+
+INSERT INTO `recruiter_subscription` (`id`, `plan_id`, `recruiter_id`, `email`, `plan_type`, `amount`, `status`, `payment_id`, `created_at`, `updated_at`, `deleted_at`) VALUES ('1', '2', '1', 'milanp.magneto@gmail.com', 'Monthly', '1200', '1', '15480CC', '2021-12-06 00:00:00', NULL, NULL);
+
+
+
+
+
+New Table (recruiters)
+
+CREATE TABLE `reqcity`.`recruiters` ( `id` INT(11) NOT NULL , `name` VARCHAR(255) NOT NULL , `email` VARCHAR(255) NOT NULL , `phone` VARCHAR(255) NOT NULL , `status` INT NOT NULL DEFAULT '1' , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , `deleted_at` DATETIME NULL ) ENGINE = InnoDB;
+
+ALTER TABLE `recruiters` ADD PRIMARY KEY(`id`);
+
+ALTER TABLE `recruiters` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
+
+
+Dummy Entry
+
+INSERT INTO `recruiters` (`id`, `name`, `email`, `phone`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES ('1', 'Milan Pathak', 'milanp.magneto@gmail.com', '8000644182', '1', '2021-12-06 09:05:00', NULL, NULL);
+
+INSERT INTO `recruiters` (`id`, `name`, `email`, `phone`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Magneto IT Solutions', 'magneto@gmail.com', '8000644182', '1', '2021-12-07 10:39:16', NULL, NULL);
+
+Nivedita(06-03-2021)
+ALTER TABLE `categories` CHANGE `description` `description` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+ALTER TABLE `categories` ADD `category_path` VARCHAR(255) NULL DEFAULT NULL AFTER `flag_product`;
+ALTER TABLE `subscription_plans` CHANGE `price` `price` DOUBLE(10,2) NOT NULL;
+
+
+Milan(07-12-2021)
+ALTER TABLE `company_subscription` CHANGE `amount` `amount` DECIMAL(10,2) NOT NULL;
+
+ALTER TABLE `recruiter_subscription` CHANGE `amount` `amount` DECIMAL(10,2) NOT NULL;
+
+
+Permissions
+Company Subscription
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_company_subscription_listing', 'securerccontrol/company-subscriptions/index', 'Company Subscription', '', '1', NULL, NULL, NULL);
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Export', 'admin_company_subscription_export', 'securerccontrol/company-subscriptions/export', 'Company Subscription', '', '1', NULL, NULL, NULL);
+
+Recruiter Subscription
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_recruiter_subscription_listing', 'securerccontrol/recruiter-subscriptions/index', 'Recruiter Subscription', '', '1', NULL, NULL, NULL);
+
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Export', 'admin_recruiter_subscription_export', 'securerccontrol/recruiter-subscriptions/export', 'Recruiter Subscription', '', '1', NULL, NULL, NULL);
+
+
+Milan (08-12-21)
+New Table
+CREATE TABLE `reqcity`.`plan_features` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `type` ENUM('Company','Recruiter') NOT NULL , `title` VARCHAR(255) NOT NULL , `description` TEXT NULL , `icon` VARCHAR(255) NOT NULL , `status` INT(11) NOT NULL DEFAULT '1' , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , `deleted_at` DATETIME NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+ALTER TABLE `plan_features` ADD `deleted` INT(11) NULL AFTER `status`;
+
+ALTER TABLE `plan_features` CHANGE `deleted` `deleted` INT(11) NULL DEFAULT '0';
+ALTER TABLE `plan_features` ADD `sort_order` INT(11) NOT NULL AFTER `icon`;
+
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Add', 'admin_plan_features_add', 'securerccontrol/plan-features/add', 'Plan Features', '', '1', NULL, NULL, NULL), (NULL, 'Listing', 'admin_plan_features_listing', 'securerccontrol/plan-features/index', 'Plan Features', '', '1', NULL, NULL, NULL);
+
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Edit', 'admin_plan_features_edit', 'securerccontrol/plan-features/edit/*', 'Plan Features', '', '1', NULL, NULL, NULL), (NULL, 'Delete', 'admin_plan_features_delete', 'securerccontrol/plan-features/delete/*', 'Plan Features', '', '1', NULL, NULL, NULL);
+
+
+
+Nivedita (8-12-2021)
+ALTER TABLE `subscription_plans` ADD `trial_period` INT(11) NULL DEFAULT NULL AFTER `flag_recommended`;
+
+
+New table recruiter_transactions
+
+CREATE TABLE `recruiter_transactions` (
+ `id` int NOT NULL AUTO_INCREMENT,
+ `recruiter_id` int DEFAULT NULL,
+ `name` varchar(255) DEFAULT NULL,
+ `email` varchar(255) DEFAULT NULL,
+ `phone` varchar(111) DEFAULT NULL,
+ `subscription_plan_id` int NOT NULL,
+ `amount` decimal(12,4) DEFAULT '0.0000',
+ `payment_id` int DEFAULT NULL,
+ `status` int DEFAULT NULL COMMENT '1 = success, 2 = failed',
+ `created_at` datetime DEFAULT NULL,
+ `updated_at` datetime DEFAULT NULL,
+ `deleted_at` datetime DEFAULT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1
+
+
+New table company_transactions
+
+
+CREATE TABLE `company_transactions` (
+ `id` int NOT NULL AUTO_INCREMENT,
+ `company_id` int DEFAULT NULL,
+ `name` varchar(255) DEFAULT NULL,
+ `email` varchar(255) DEFAULT NULL,
+ `phone` varchar(111) DEFAULT NULL,
+ `subscription_plan_id` int NOT NULL,
+ `amount` decimal(12,4) DEFAULT '0.0000',
+ `payment_id` int DEFAULT NULL,
+ `status` int DEFAULT NULL COMMENT '1 = success, 2 = failed',
+ `created_at` datetime DEFAULT NULL,
+ `updated_at` datetime DEFAULT NULL,
+ `deleted_at` datetime DEFAULT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1
+
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_company_transaction_listing', 'securerccontrol/company-transaction/index', 'Company Transactions', '', '1', NULL, NULL, NULL);
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Export', 'admin_company_transaction_export', 'securerccontrol/company-transaction/export', 'Company Transactions', '', '1', NULL, NULL, NULL);
+
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_recruiter_transaction_listing', 'securerccontrol/recruiter-transaction/index', 'Recruiter Transactions', '', '1', NULL, NULL, NULL);
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Export', 'admin_recruiter_transaction_export', 'securerccontrol/recruiter-transaction/export', 'Recruiter Transactions', '', '1', NULL, NULL, NULL);
+
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Import', 'admin_categories_import', 'securerccontrol/category/import', 'Job Categories', '', '1', NULL, NULL, NULL);
+
+
+
+
+Milan (09-12-21)
+
+New Table company_job_funding
+
+CREATE TABLE `reqcity`.`company_job_funding` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `company_id` INT(11) NOT NULL , `company_job_id` INT(11) NOT NULL , `amount` DECIMAL(10,2) NOT NULL , `payment_id` VARCHAR(255) NOT NULL , `status` INT NOT NULL DEFAULT '2' COMMENT '1 = completed, 2 = pending, 3 = failed' , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , `deleted_at` DATETIME NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+ALTER TABLE `company_job_funding` ADD `deleted` INT(11) NOT NULL DEFAULT '0' AFTER `status`;
+
+INSERT INTO `company_job_funding` (`id`, `company_id`, `company_job_id`, `amount`, `payment_id`, `status`, `deleted`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', '1', '1500', 'ABC1452CC', '2', '0', NULL, NULL, NULL);
+
+INSERT INTO `company_job_funding` (`id`, `company_id`, `company_job_id`, `amount`, `payment_id`, `status`, `deleted`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '2', '2', '1800.00', 'NB1500012820', '3', '0', '2021-12-07 08:00:00', NULL, NULL);
+
+
+
+INSERT INTO `company_job_funding` (`id`, `company_id`, `company_job_id`, `amount`, `payment_id`, `status`, `deleted`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', '2', '1800', 'CC145282', '1', '0', NULL, NULL, NULL);
+
+
+New Table company_jobs
+CREATE TABLE `reqcity`.`company_jobs` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `company_id` INT(11) NOT NULL , `title` VARCHAR(150) NOT NULL , `job_description` TEXT NULL , `job_category_id` INT(11) NOT NULL , `vaccancy` INT(11) NOT NULL , `job_industry_id` INT NULL , `job_technology_id` INT NULL , `job_skills` VARCHAR(255) NULL , `job_employment_type_id` INT(11) NULL , `job_contract_id` INT(11) NULL , `covid_precautions` TEXT NULL , `job_questionnaire_template_id` INT(11) NULL , `total_amount_required` DECIMAL(10,2) NULL , `total_amount_paid` DECIMAL(10,2) NULL , `balance` DECIMAL(10,2) NULL , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , `deleted_at` DATETIME NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+
+INSERT INTO `company_jobs` (`id`, `company_id`, `title`, `job_description`, `job_category_id`, `vaccancy`, `job_industry_id`, `job_technology_id`, `job_skills`, `job_employment_type_id`, `job_contract_id`, `covid_precautions`, `job_questionnaire_template_id`, `total_amount_required`, `total_amount_paid`, `balance`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', 'Web Developer', 'Develop a web based softwares', '1', '3', '5', '1', 'Larave,PHP,OOPS..', '1', '2', NULL, '1', '1200', '1000', '200', '2021-12-09 07:00:00', NULL, NULL);
+
+INSERT INTO `company_jobs` (`id`, `company_id`, `title`, `job_description`, `job_category_id`, `vaccancy`, `job_industry_id`, `job_technology_id`, `job_skills`, `job_employment_type_id`, `job_contract_id`, `covid_precautions`, `job_questionnaire_template_id`, `total_amount_required`, `total_amount_paid`, `balance`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', 'Python Developer', 'Develop a Python Application', '1', '3', '5', '1', 'Android,IOS,Fluter etc..', '1', '2', NULL, '1', '1200.00', '1000.00', '200.00', '2021-12-09 07:00:00', NULL, NULL);
+
+
+Permissions
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_company_job_funding_listing', 'securerccontrol/job-funding/index', 'Job Funds', '', '1', NULL, NULL, NULL), (NULL, 'Export', 'admin_company_job_funding_export', 'securerccontrol/job-funding/export', 'Job Funds', '', '1', NULL, NULL, NULL);
+
+
+
+
+New table
+
+Recruiter_payouts
+
+CREATE TABLE `recruiter_payouts` (
+ `id` int NOT NULL AUTO_INCREMENT,
+ `recruiter_id` int DEFAULT NULL,
+ `amount` decimal(12,4) NOT NULL DEFAULT '0.0000',
+ `application_ids` varchar(255) DEFAULT NULL,
+ `payment_id` int DEFAULT NULL,
+ `bank_name` varchar(255) DEFAULT NULL,
+ `currency_code` varchar(255) DEFAULT NULL,
+ `account_number` varchar(255) DEFAULT NULL,
+ `bank_address` varchar(255) DEFAULT NULL,
+ `swift_code` varchar(255) DEFAULT NULL,
+ `bank_city` varchar(255) DEFAULT NULL,
+ `bank_country` varchar(255) DEFAULT NULL,
+ `status` int NOT NULL DEFAULT '1' COMMENT '0:inactive 1:active',
+ `created_at` datetime DEFAULT NULL,
+ `updated_at` datetime DEFAULT NULL,
+ `deleted_at` datetime DEFAULT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_recruiter_payout_listing', 'securerccontrol/recruiter-payouts/index', 'Recruiter Payouts', '', '1', NULL, NULL, NULL);
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Export', 'admin_recruiter_payout_export', 'securerccontrol/recruiter-payouts/export', 'Recruiter Payouts', '', '1', NULL, NULL, NULL);
+
+INSERT INTO `recruiter_payouts` (`id`, `recruiter_id`, `amount`, `application_ids`, `payment_id`, `bank_name`, `currency_code`, `account_number`, `bank_address`, `swift_code`, `bank_city`, `bank_country`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 1, '89.9900', '1,2,3', 9104, 'IDBI', '1', 'ABC1090', '3034 Hilltop Street', 'SBC1090', 'Springfield', 'US', 1, '2021-12-09 00:00:00', NULL, NULL),
+(2, 2, '99.0000', '1,2,3', 9105, 'JCB Bank', '1', 'XYZ1990', '3237 Creighton Ln, Bedford, TX, 76021  ', 'S1990', 'Bedford', 'US', 1, '2021-12-09 00:00:00', NULL, NULL);
+
+
+New table
+recruiter_tax_forms
+
+CREATE TABLE `recruiter_tax_forms` (
+ `id` int NOT NULL AUTO_INCREMENT,
+ `recruiter_id` int NOT NULL,
+ `form_name` varchar(255) DEFAULT NULL,
+ `tax_form` varchar(255) NOT NULL,
+ `status` int NOT NULL DEFAULT '1' COMMENT '0:Inactive,1:Active',
+ `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ `updated_at` datetime DEFAULT NULL,
+ `deleted_at` datetime DEFAULT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1
+
+INSERT INTO `recruiter_tax_forms` (`id`, `recruiter_id`, `form_name`, `tax_form`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 1, 'form 1', '103120000000007765.pdf', 1, '2021-12-09 19:07:28', NULL, NULL),
+(2, 2, 'form 2', '103120000000007795.pdf', 1, '2021-12-09 19:07:28', NULL, NULL);
+
+
+
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_recruiter_tax_froms_listing', 'securerccontrol/recruiter-w9-forms/index', 'Recruiter W9-Forms', '', '1', NULL, NULL, NULL);
+
+
+
+
+
+
+
+
+
+
+Milan (10-12-21)
+New table candidates
+
+
+
+CREATE TABLE `reqcity`.`candidates` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `first_name` DATE NOT NULL , `last_name` VARCHAR(150) NOT NULL , `email` VARCHAR(200) NOT NULL , `password` VARCHAR(255) NOT NULL , `profile_pic` VARCHAR(255) NULL , `dob` DATE NOT NULL , `about` TEXT NULL , `address_1` VARCHAR(255) NOT NULL , `address_2` VARCHAR(255) NULL , `city` VARCHAR(255) NULL , `state` VARCHAR(255) NULL , `country` VARCHAR(255) NULL , `postcode` VARCHAR(255) NULL , `phone_ext` VARCHAR(200) NULL , `phone` VARCHAR(150) NULL , `status` INT NOT NULL DEFAULT '2' COMMENT '1=active, 2=inactive, 3=suspended' , `deleted` INT NOT NULL DEFAULT '0' , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , `deleted_at` DATETIME NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+ALTER TABLE `candidates` CHANGE `first_name` `first_name` VARCHAR(150) NOT NULL;
+
+ALTER TABLE `candidates` ADD `job_title` VARCHAR(255) NULL AFTER `phone`;
+
+
+INSERT INTO `candidates` (`id`, `first_name`, `last_name`, `email`, `password`, `profile_pic`, `dob`, `about`, `address_1`, `address_2`, `city`, `state`, `country`, `postcode`, `phone_ext`, `phone`, `job_title`, `status`, `deleted`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Milan', 'Pathak', 'milanp@gmail.com', '12345678', '1.jpg', '1998-12-09', 'Thsi is about field', '\"Shree Ramnath Krupa\" , 3-A Kailash Nagar', 'Kalawad Road', 'Rajkot', 'Gujarat', 'India', '360007', '+91', '8000644182', 'Web Developer', '2', '0', '2021-12-08 06:00:00', NULL, NULL);
+
+
+INSERT INTO `candidates` (`id`, `first_name`, `last_name`, `email`, `password`, `profile_pic`, `dob`, `about`, `address_1`, `address_2`, `city`, `state`, `country`, `postcode`, `phone_ext`, `phone`, `job_title`, `status`, `deleted`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Nivedita', 'Kale', 'nivedita@gmail.com', '12345678', '3.jpg', '1998-12-09', 'This is about field', 'S.G Highway Main Road', NULL, 'Ahmedabad', 'Gujarat', 'India', '40006', '+91', '9879905424', 'Software Developer', '1', '0', '2021-12-06 09:05:00', NULL, NULL);
+
+INSERT INTO `candidates` (`id`, `first_name`, `last_name`, `email`, `password`, `profile_pic`, `dob`, `about`, `address_1`, `address_2`, `city`, `state`, `country`, `postcode`, `phone_ext`, `phone`, `job_title`, `status`, `deleted`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Sachin', 'Patel', 'sachinp@gmail.com', '12345678', NULL, '1998-06-13', 'This is about field', 'Kokne Chowk', NULL, 'Pune', 'Maharashtra', 'India', '520006', '+91', '6279905424', 'Application Developer', '3', '0', '2021-11-28 09:05:00', NULL, NULL);
+
+
+
+New Table candidate_resume
+
+CREATE TABLE `reqcity`.`candidate_resume` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `candidate_id` INT(11) NOT NULL , `resume` VARCHAR(255) NOT NULL , `deleted` INT NOT NULL DEFAULT '0' , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , `deleted_at` DATETIME NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+
+ALTER TABLE `candidates` CHANGE `candidate_resume` `candidate_resume_id` INT(11) NULL DEFAULT NULL;
+
+ALTER TABLE `candidate_resume` ADD `version_num` INT(11) NOT NULL AFTER `resume`;
+Resume Table Data
+
+INSERT INTO `candidate_resume` (`id`, `candidate_id`, `resume`, `version_num`, `deleted`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', 'resume1.pdf', '1', '0', '2021-12-10 00:00:00', NULL, NULL);
+
+INSERT INTO `candidate_resume` (`id`, `candidate_id`, `resume`, `version_num`, `deleted`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '2', 'resume2.pdf', '1', '0', '2021-12-10 00:00:00', NULL, NULL);
+
+INSERT INTO `candidate_resume` (`id`, `candidate_id`, `resume`, `version_num`, `deleted`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '3', 'resume3.pdf', '1', '0', '2021-12-10 00:00:00', NULL, NULL);
+
+INSERT INTO `candidate_resume` (`id`, `candidate_id`, `resume`, `version_num`, `deleted`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', 'resume1_2.pdf', '1', '0', '2021-12-10 00:00:00', NULL, NULL);
+
+INSERT INTO `candidate_resume` (`id`, `candidate_id`, `resume`, `version_num`, `deleted`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '2', 'resume2_1.docx', '2', '0', '2021-12-10 00:00:00', NULL, NULL);
+
+
+Permission
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_candidate_listing', 'securerccontrol/candidate/index', 'Candidates', '', '1', NULL, NULL, NULL), (NULL, 'Export', 'admin_candidate_list_export', 'securerccontrol/candidate/export', 'Candidates', '', '1', NULL, NULL, NULL);
+
+
+Milan (13/12/2021)
+
+New Table company_job_comission
+
+CREATE TABLE `reqcity`.`company_job_commission` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `company_job_id` INT(11) NOT NULL , `company_job_application_id` INT(11) NOT NULL , `amount` DECIMAL(10,2) NOT NULL , `type` INT(11) NOT NULL DEFAULT '1' COMMENT '1= recruiter 2=admin' , `recruiter_id` INT(11) NOT NULL DEFAULT '0' COMMENT 'default 0 and 0 means admin amount' , `flag_paid` INT(11) NOT NULL DEFAULT '0' COMMENT '0 = Unpaid 1 = Paid' , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , `deleted_at` DATETIME NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+
+
+
+
+
+
+
+
+
+Data
+
+INSERT INTO `company_job_commission` (`id`, `company_job_id`, `company_job_application_id`, `amount`, `type`, `recruiter_id`, `flag_paid`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', '1', '1500', '1', '1', '0', '2021-12-01 08:30:50', NULL, NULL), (NULL, '2', '2', '1200', '1', '2', '0', '2021-12-13 10:20:00', NULL, NULL);
+
+INSERT INTO `company_job_commission` (`id`, `company_job_id`, `company_job_application_id`, `amount`, `type`, `recruiter_id`, `flag_paid`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', '2', '1500', '2', '0', '1', '2021-12-06 00:00:00', NULL, NULL), (NULL, '3', '2', '1200', '1', '0', '0', '2021-11-10 05:16:19', NULL, NULL);
+
+
+UPDATE `company_job_commission` SET `recruiter_id` = '1' WHERE `company_job_commission`.`id` = 4;
+
+
+INSERT INTO `company_job_commission` (`id`, `company_job_id`, `company_job_application_id`, `amount`, `type`, `recruiter_id`, `flag_paid`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '2', '3', '1800', '2', '0', '1', '2021-12-06 09:05:00', NULL, NULL), (NULL, '2', '2', '1200', '2', '0', '0', '2021-11-17 00:00:00', NULL, NULL);
+
+New Table company_job_application
+
+CREATE TABLE `reqcity`.`company_job_applications` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `company_id` INT(11) NOT NULL , `company_job_id` INT(11) NOT NULL , `applied_type` INT(11) NOT NULL DEFAULT '1' COMMENT '1= recruiter 2=candidate specialist' , `related_id` INT(11) NOT NULL COMMENT 'recruiter id or candidate specialist id' , `candidate_id` INT(11) NULL COMMENT 'for recruiters it will be candidate bank id, for candidate specialist it will be main candidate id' , `cv` VARCHAR(255) NULL COMMENT '1= submitted, 2= in review, 3 = accepted, 4 = rejected' , `status` INT NOT NULL DEFAULT '1' , `rejection_reason` VARCHAR(255) NULL , `deleted` INT NOT NULL DEFAULT '0' , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , `deleted_at` DATETIME NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+Data
+
+INSERT INTO `company_job_applications` (`id`, `company_id`, `company_job_id`, `applied_type`, `related_id`, `candidate_id`, `cv`, `status`, `rejection_reason`, `deleted`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', '1', '1', '1', '1', NULL, '1', NULL, '0', '2021-12-08 06:00:00', NULL, NULL), (NULL, '2', '2', '1', '2', '2', NULL, '1', NULL, '0', '2021-12-13 10:20:00', NULL, NULL);
+
+INSERT INTO `company_job_applications` (`id`, `company_id`, `company_job_id`, `applied_type`, `related_id`, `candidate_id`, `cv`, `status`, `rejection_reason`, `deleted`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', '3', '1', '1', '3', NULL, '1', NULL, '0', '2021-12-08 04:17:00', NULL, NULL);
+
+ALTER TABLE `recruiter_payouts` CHANGE `payment_id` `payment_id` VARCHAR(255) NULL DEFAULT NULL;
+ALTER TABLE `recruiter_payouts` CHANGE `application_ids` `application_ids` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+
+
+Nivedita (14-12-2021)
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_cms_page_listing', 'securerccontrol/cms-page/list', 'CMS Pages', '', '1', '2021-12-14 11:44:05', NULL, NULL), (NULL, 'Add', 'admin_cms_page_add', 'securerccontrol/cms-page/create', 'CMS Pages', '', '1', '2021-12-14 11:44:05', NULL, NULL);
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Edit', 'admin_cms_page_edit', 'securerccontrol/cms-page/edit/*', 'CMS Pages', '', '1', '2021-12-14 11:44:05', NULL, NULL), (NULL, 'Delete', 'admin_cms_page_delete', 'securerccontrol/cms-page/delete/*', 'CMS Pages', '', '1', '2021-12-14 11:44:05', NULL, NULL);
+
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_home_page_banner_listing', 'securerccontrol/home-page-banner/list', 'Home Page Banner', '', '1', '2021-12-14 11:44:05', NULL, NULL), (NULL, 'Edit', 'admin_home_page_banner_edit', 'securerccontrol/home-page-banner/edit/*', 'Home Page Banner', '', '1', '2021-12-14 11:44:05', NULL, NULL);
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Update', 'admin_general_setting_update', 'securerccontrol/settings', 'General Settings', '', '1', '2021-12-14 11:44:05', NULL, NULL);
+
+
+Milan 15-12-2021
+
+New Table recruiter_bank_details
+
+CREATE TABLE `reqcity`.`recruiter_bank_details` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `recruiter_id` INT(11) NOT NULL , `bank_name` VARCHAR(255) NOT NULL , `currency_code` VARCHAR(255) NOT NULL , `account_number` VARCHAR(255) NOT NULL , `bank_address` TEXT NOT NULL , `swift_code` VARCHAR(255) NOT NULL , `bank_city` VARCHAR(255) NOT NULL , `bank_country` VARCHAR(255) NOT NULL , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , `deleted_at` DATETIME NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+INSERT INTO `recruiter_bank_details` (`id`, `recruiter_id`, `bank_name`, `currency_code`, `account_number`, `bank_address`, `swift_code`, `bank_city`, `bank_country`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', 'ICICI BANK ', 'INR', '15000152452', 'Shivallik 2, 132 Feet Ring Road, Jodhpurgam Satellite Area, 0, Ahmedabad, Gujarat 380015', 'ICICABD0JDP', 'Ahmedabad', 'India', '2021-12-08 06:00:00', NULL, NULL), (NULL, '2', 'HDFC BANK', 'INR', '40505253446', 'Shop No 103, 1st Floor, Landmark Cplx 100 Ft, 100 Feet Anand Nagar Rd, opposite Seema Hall, Satellite, Ahmedabad, Gujarat 380015', 'HDFCABDPRH', 'Ahmedabad', 'India', '2021-12-08 06:00:00', NULL, NULL);
+
+Milan 17/12/21
+
+UPDATE `company_job_commission` SET `flag_paid`=0 WHERE 1
+
+
+Nivedita (17-12-2021)
+
+
+CREATE TABLE `job_balance_transfer_requests` (
+ `id` int NOT NULL AUTO_INCREMENT,
+ `company_id` int NOT NULL,
+ `from_company_job_id` int NOT NULL,
+ `to_company_job_id` int NOT NULL,
+ `balance` decimal(14,2) NOT NULL,
+ `status` int NOT NULL DEFAULT '1' COMMENT '1 = pending 2 = approved 3 = rejected',
+ `reject_reason` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+ `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ `created_by` int DEFAULT NULL,
+ `updated_at` datetime DEFAULT NULL,
+ `updated_by` int DEFAULT NULL,
+ `deleted_at` datetime DEFAULT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB ;
+
+CREATE TABLE `notifications` (
+ `id` int NOT NULL AUTO_INCREMENT,
+ `type` int DEFAULT NULL COMMENT '1= company, 2= recruiter 3 = candidate 4 = admin 5 = candidate specialist',
+ `related_id` int NOT NULL,
+ `notification_code` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'JOBBALAPR-approved,JOBBALRJC:rejected',
+ `message` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+ `status` int NOT NULL DEFAULT '1',
+ `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ `updated_at` datetime DEFAULT NULL,
+ `deleted_at` datetime DEFAULT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+
+
+
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_job_balance_transfer_requests_listing', 'job-balance-transfer-requests/index', 'Balance Transfer Requests', '', '1', '2021-12-14 11:44:05', NULL, NULL);
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Approve', 'admin_job_balance_transfer_requests_approve_approve', 'job-balance-transfer-requests/approve/*', 'Balance Transfer Requests', '', '1', '2021-12-14 11:44:05', NULL, NULL);
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Reject', 'admin_job_balance_transfer_requests_approve_reject', 'job-balance-transfer-requests/reject/*', 'Balance Transfer Requests', '', '1', '2021-12-14 11:44:05', NULL, NULL);
+
+
+Milan (20-12-2021)
+
+ALTER TABLE `notifications` CHANGE `related_id` `related_id` TEXT NOT NULL;
+ 
+
+New Table book_demo_requests
+
+CREATE TABLE `reqcity`.`book_demo_requests` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `type` INT NOT NULL DEFAULT '1' COMMENT '1=> Company , 2=>Recruiters' , `first_name` VARCHAR(255) NOT NULL , `last_name` VARCHAR(255) NOT NULL , `email` VARCHAR(255) NOT NULL , `phone` VARCHAR(100) NOT NULL , `requirement` TEXT NOT NULL , `status` INT NOT NULL DEFAULT '0' COMMENT '0=>pending 1=>completed' , `created_at` TIMESTAMP NULL , `updated_at` TIMESTAMP NULL , `deleted_at` TIMESTAMP NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+INSERT INTO `book_demo_requests` (`id`, `type`, `first_name`, `last_name`, `email`, `phone`, `requirement`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', 'Milan', 'Pathak', 'milanp.magneto@gmail.com', '8000644182', 'This is for demo purpose ', '0', '2021-12-20 03:00:00', NULL, NULL), (NULL, '2', 'sunny', 'Patel', 'sunny@gmail.com', '9879907227', 'This is for testing purpose', '1', '2021-12-20 03:00:00', NULL, NULL);
+
+INSERT INTO `book_demo_requests` (`id`, `type`, `first_name`, `last_name`, `email`, `phone`, `requirement`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '2', 'Jainam', 'Mehta', 'jainam@gmail.com', '02452448252', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta recusandae quos culpa sequi velit cumque aliquam magni, fugiat doloremque libero officia. Voluptates numquam iste, inventore accusamus distinctio incidunt delectus labore?', '0', '2021-12-08 00:00:00', NULL, NULL), (NULL, '1', 'Dilpesh', 'Badarshahi', 'dilpesh@gmail.com', '78782574855', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta recusandae quos culpa ', '0', '2021-11-10 05:16:19', NULL, NULL)
+
+
+INSERT INTO `book_demo_requests` (`id`, `type`, `first_name`, `last_name`, `email`, `phone`, `requirement`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, '1', 'Manish', 'Patel', 'manish@gmail.com', '7878168564', 'This is a testing purpose text for demo', '1', NULL, NULL, NULL), (NULL, '2', 'Vishal', 'Gosia', 'vishal@gmail.com', '8000644182', 'I want to show demo of ReqCity', '0', NULL, NULL, NULL);
+
+UPDATE `book_demo_requests` SET `created_at` = '2021-12-06 09:05:00', `updated_at` = NULL, `deleted_at` = NULL WHERE `book_demo_requests`.`id` = 5
+
+UPDATE `book_demo_requests` SET `created_at` = '2021-09-03 09:16:04', `updated_at` = NULL, `deleted_at` = NULL WHERE `book_demo_requests`.`id` = 6
+
+
+Milan (21-12-2021)
+
+CREATE TABLE `reqcity`.`highlited_jobs` ( `id` INT(11) NOT NULL , `company_id` INT(11) NOT NULL , `company_job_id` INT(11) NOT NULL , `start_date` DATETIME NULL , `end_date` DATETIME NULL , `created_at` TIMESTAMP NULL , `created_by` INT NULL , `updated_at` TIMESTAMP NULL , `updated_by` INT NULL , `deleted_at` DATETIME NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+ALTER TABLE `highlited_jobs` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
+ 
+ALTER TABLE `company_jobs` ADD `status` INT(11) NOT NULL DEFAULT '1' COMMENT '1=>active 0=>inactive' AFTER `balance`;
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_book_demo_request_listing', 'securerccontrol/book-demo-requests/index', 'Book a Demo Request', '', '1', NULL, NULL, NULL), (NULL, 'View', 'admin_book_demo_request_view', 'securerccontrol/book-demo-requests/view-details', 'Book a Demo Request', '', '1', NULL, NULL, NULL), (NULL, 'Mark Completed', 'admin_book_demo_request_mark_completed', 'securerccontrol/book-demo-requests/book-demo-requests/mark-completed', 'Book a Demo Request', '', '1', NULL, NULL, NULL);
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_recruiter_payment_listing', 'securerccontrol/recruiter-payment/index', 'Recruiter Payment', '', '1', NULL, NULL, NULL), (NULL, 'Export', 'admin_recruiter_payment_export', 'securerccontrol/recruiter-payment/export', 'Recruiter Payment', '', '1', NULL, NULL, NULL);
+
+INSERT INTO `permissions` (`id`, `permission_title`, `permission_slug`, `permission_route`, `permission_group`, `permission_description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES (NULL, 'Listing', 'admin_admin_commission_listing', 'securerccontrol/admin-commission/index', 'Admin Commission', '', '1', NULL, NULL, NULL), (NULL, 'Export', 'admin_commission_export', 'securerccontrol/admin-commission/export', 'Admin Commission', '', '1', NULL, NULL, NULL);

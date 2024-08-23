@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>D0B37C20-0E0F-4FC6-B8CB-741B1F778583</title>
+    <g id="Web-Layouts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="11.2-My-Account-(Edit-Profile)" transform="translate(-559.000000, -344.000000)">
+            <g id="Profile" transform="translate(487.000000, 272.000000)">
+                <g id="edit-pic" transform="translate(72.000000, 72.000000)">
+                    <circle id="Oval" fill="#F4F6F8" cx="16" cy="16" r="16"></circle>
+                    <path d="M22,19.7272727 C22,20.3297652 21.5115834,20.8181818 20.9090909,20.8181818 L11.0909091,20.8181818 C10.4884166,20.8181818 10,20.3297652 10,19.7272727 L10,13.7272727 C10,13.1247803 10.4884166,12.6363636 11.0909091,12.6363636 L13.2727273,12.6363636 L14.3636364,11 L17.6363636,11 L18.7272727,12.6363636 L20.9090909,12.6363636 C21.5115834,12.6363636 22,13.1247803 22,13.7272727 L22,19.7272727 Z" id="Path" stroke="#212B36" stroke-width="1.33333333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <circle id="Oval" stroke="#212B36" stroke-width="1.33333333" stroke-linecap="round" stroke-linejoin="round" cx="16" cy="16.4545455" r="2.18181818"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
