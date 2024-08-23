@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="<?php echo e(asset('public/assets/custom/css/style.css')); ?>"><?php /**PATH /var/www/html/php/reqcity/resources/views/admin/include/external-css.blade.php ENDPATH**/ ?>
